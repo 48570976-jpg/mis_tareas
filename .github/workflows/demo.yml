@@ -1,9 +1,14 @@
-name: Demo clase
-on: [push]
-jobs:
- mensaje:
-  runs-on: ubuntu-latest
+name: Primer workflow
 
-  steps:
-   -name: Primer mensaje
-    run: echo "Hola desde GitHub Actions"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje
+        run: echo "Hola GitHub Actions"
